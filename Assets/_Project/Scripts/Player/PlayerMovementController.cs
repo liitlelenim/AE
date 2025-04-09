@@ -6,12 +6,13 @@ namespace AE.Player
     [RequireComponent(typeof(CharacterController))]
     public class PlayerMovementController : MonoBehaviour
     {
-        [Header("Movement Settings")] 
+        [Header("Movement Settings")]
+        
         [SerializeField] private float movementSpeed = 7.5f;
 
         [SerializeField] private float minFallingSpeed = 9f;
         [SerializeField] private float maxFallingSpeed = 25f;
-        
+
         private PlayerInputActions _playerInputActions;
         private CharacterController _characterController;
 
@@ -38,9 +39,11 @@ namespace AE.Player
             _playerInputActions?.Disable();
         }
 
+        // It's worth noting that the Character Controller is not based on rigidbody
+        // so the movement using it should be performed in the "Update"
         private void Update()
         {
-            _characterController.Move(GetRelativeMovementDirection(_movementDirectionInput) * 
+            _characterController.Move(GetRelativeMovementDirection(_movementDirectionInput) *
                                       (movementSpeed * Time.deltaTime));
 
             HandleGravity();
@@ -48,8 +51,16 @@ namespace AE.Player
 
         private void HandleGravity()
         {
-            _currentFallingSpeed += Physics.gravity.y * Time.deltaTime;
-            _currentFallingSpeed = Mathf.Clamp(_currentFallingSpeed, -minFallingSpeed, -maxFallingSpeed);
+            if(_characterController.isGrounded)
+            {
+                _currentFallingSpeed = -minFallingSpeed;
+            }
+            else
+            {
+                _currentFallingSpeed += Physics.gravity.y * Time.deltaTime;
+                _currentFallingSpeed = Mathf.Clamp(_currentFallingSpeed, -maxFallingSpeed, -minFallingSpeed);
+            }
+
             _characterController.Move(Vector3.up * (_currentFallingSpeed * Time.deltaTime));
         }
 
