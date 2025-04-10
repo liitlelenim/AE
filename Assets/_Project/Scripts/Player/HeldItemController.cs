@@ -38,7 +38,7 @@ namespace AE.Player
         {
             if (item == null)
             {
-                Debug.LogError("Tried to pass null item to pick up method", this);
+                Debug.LogWarning("Tried to pick up null item", this);
                 return;
             }
             
