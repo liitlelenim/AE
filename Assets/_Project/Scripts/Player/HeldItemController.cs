@@ -1,4 +1,7 @@
+using System;
 using AE.Item;
+using AE.Manager;
+using AE.Manager.Locator;
 using DG.Tweening;
 using UnityEngine;
 
@@ -13,8 +16,24 @@ namespace AE.Player
         [SerializeField] private Transform itemHolder;
         [SerializeField] private PickUpItem heldItem;
 
+        private PickUpItemManager _pickUpItemManager;
         private Sequence _pickUpSequence;
-        
+
+        private void Awake()
+        {
+            _pickUpItemManager = ManagersLocator.Instance.GetManager<PickUpItemManager>();
+        }
+
+        private void OnEnable()
+        {
+            _pickUpItemManager.OnPickUpItem += PickUp;            
+        }
+
+        private void OnDisable()
+        {
+            _pickUpItemManager.OnPickUpItem -= PickUp;            
+        }
+
         private void PickUp(PickUpItem item)
         {
             if (item == null)
@@ -22,7 +41,7 @@ namespace AE.Player
                 Debug.LogError("Tried to pass null item to pick up method", this);
                 return;
             }
-
+            
             heldItem = item;
             heldItem.MarkAsPickedUp();
             heldItem.transform.SetParent(itemHolder, true);
