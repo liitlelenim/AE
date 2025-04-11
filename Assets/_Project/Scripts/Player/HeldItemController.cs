@@ -1,4 +1,3 @@
-using System;
 using AE.Item;
 using AE.Manager;
 using AE.Manager.Locator;
@@ -27,11 +26,13 @@ namespace AE.Player
         private void OnEnable()
         {
             _pickUpItemManager.OnPickUpItem += PickUp;            
+            _pickUpItemManager.OnPutDownItem += PutDown;            
         }
 
         private void OnDisable()
         {
             _pickUpItemManager.OnPickUpItem -= PickUp;            
+            _pickUpItemManager.OnPutDownItem -= PutDown;            
         }
 
         private void PickUp(PickUpItem item)

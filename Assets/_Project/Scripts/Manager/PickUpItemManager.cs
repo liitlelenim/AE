@@ -8,6 +8,7 @@ namespace AE.Manager
     public class PickUpItemManager : MonoBehaviour, IManager
     {
         public event Action<PickUpItem> OnPickUpItem;
+        public event Action OnPutDownItem;
         public PickUpItem CurrentHeldItem { get; private set; }
         public bool IsHoldingItem => CurrentHeldItem != null;
 
@@ -25,6 +26,7 @@ namespace AE.Manager
 
         public void PutDownItem()
         {
+            OnPutDownItem?.Invoke();
             CurrentHeldItem = null;
         }
     }
