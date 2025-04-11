@@ -11,7 +11,7 @@ namespace AE.Item
         [field: SerializeField] public Vector3 HoldingOffset { get; private set; }
         [field: SerializeField] public Vector3 HoldingRotation { get; private set; }
 
-        [Header("References")]
+        [Header("Reference For Optional Physics Handling")]
         [SerializeField, Tooltip("Should be set only when you want rigidbody to be affected by picking up logic")]
         private Rigidbody itemRigidbody;
         
