@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3882336440986590265}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Camera Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5086853032168337088}
   - component: {fileID: 7947765300448672706}
   - component: {fileID: 6120251957150297365}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 2854509831796149948}
   - component: {fileID: 1399582205458368866}
   - component: {fileID: 8291556769508868611}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 7709807341045242321}
   - component: {fileID: 1047962040940170627}
   - component: {fileID: 9124105714712344203}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Held Item Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -406,6 +406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 1362984991790062291, guid: e12f6afb80731694e85caab55fe82782, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4696498841386627110, guid: e12f6afb80731694e85caab55fe82782, type: 3}
       propertyPath: interactionRaycastOrigin
       value: 
@@ -472,9 +476,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Held Item Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 310594934660404637, guid: ad22a012823edbe48888b00a2b9a8cb3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2620838696831083176, guid: ad22a012823edbe48888b00a2b9a8cb3, type: 3}
       propertyPath: itemPickUpDuration
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038654714094943592, guid: ad22a012823edbe48888b00a2b9a8cb3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6608514209043359685, guid: ad22a012823edbe48888b00a2b9a8cb3, type: 3}
       propertyPath: m_LocalPosition.x

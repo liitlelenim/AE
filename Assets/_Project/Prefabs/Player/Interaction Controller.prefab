@@ -46,3 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionRaycastOrigin: {fileID: 0}
   interactionDetectionDistance: 5
+  detectionLayerMask:
+    serializedVersion: 2
+    m_Bits: 1

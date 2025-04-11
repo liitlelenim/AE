@@ -11,10 +11,10 @@ namespace AE.Player
         
         [SerializeField] private Transform interactionRaycastOrigin;
         [SerializeField] private float interactionDetectionDistance = 5f;
-
+        [SerializeField] private LayerMask detectionLayerMask;
+        
         private IInteractableObject _detectedInteractable;
         private PlayerInputActions _playerInputActions;
-        private readonly RaycastHit[] _raycastHitResult = new RaycastHit[10];
 
         private void OnEnable()
         {
@@ -46,17 +46,18 @@ namespace AE.Player
 
         private void TryToDetectInteractable()
         {
-            int size = Physics.RaycastNonAlloc(interactionRaycastOrigin.transform.position,
-                interactionRaycastOrigin.forward, _raycastHitResult, interactionDetectionDistance);
-
-            for (int i = 0; i < size; i++)
+            bool didHit = Physics.Raycast(interactionRaycastOrigin.transform.position,
+                interactionRaycastOrigin.forward,
+                out RaycastHit hitResult,
+                interactionDetectionDistance,
+                detectionLayerMask);
+           
+            if (didHit && hitResult.transform.TryGetComponent(out IInteractableObject interactable))
             {
-                if (_raycastHitResult[i].transform.TryGetComponent(out IInteractableObject interactable))
-                {
-                    _detectedInteractable = interactable;
-                    return;
-                }
+                _detectedInteractable = interactable;
+                return;
             }
+            
 
             _detectedInteractable = null;
         }
