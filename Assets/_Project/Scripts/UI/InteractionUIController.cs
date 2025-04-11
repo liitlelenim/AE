@@ -10,13 +10,12 @@ namespace AE.UI
 {
     public class InteractionUIController : MonoBehaviour
     {
-        [Header("Locomotion Dot Settings")] [SerializeField]
-        private float locomotionDotSizeChangeDuration = 0.2f;
-
+        [Header("Locomotion Dot Settings")] 
+        [SerializeField] private float locomotionDotSizeChangeDuration = 0.2f;
         [SerializeField] private float locomotionDotEnlargedSize = 2f;
 
-        [Header("References")] [SerializeField]
-        private TextMeshProUGUI tooltipTMP;
+        [Header("References")]
+        [SerializeField] private TextMeshProUGUI tooltipTMP;
 
         [SerializeField] private RawImage locomotionDot;
         private TooltipManager _tooltipManager;
