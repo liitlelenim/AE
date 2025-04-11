@@ -5,6 +5,8 @@ namespace AE.Item
     [RequireComponent(typeof(Collider))]
     public class PickUpItem : MonoBehaviour
     {
+        [Header("Item Settings")]
+        [field: SerializeField] public ItemIdentifier ItemIdentifier { get; private set; }
         [Header("Holding Offset Settings")]
         [field: SerializeField] public Vector3 HoldingOffset { get; private set; }
         [field: SerializeField] public Vector3 HoldingRotation { get; private set; }

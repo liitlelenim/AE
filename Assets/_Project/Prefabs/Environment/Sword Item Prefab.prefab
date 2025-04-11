@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ea2da8c5a1d42418c9a0296c1cba38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ItemIdentifier>k__BackingField: {fileID: 11400000, guid: d7b25be593071aa4da8aa395f83dc01c, type: 2}
   <HoldingOffset>k__BackingField: {x: 0.75, y: 0, z: 1.25}
   <HoldingRotation>k__BackingField: {x: 90, y: 0, z: 90}
   itemRigidbody: {fileID: 5017905953067008909}
