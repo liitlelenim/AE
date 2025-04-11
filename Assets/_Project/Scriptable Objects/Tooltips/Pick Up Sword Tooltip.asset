@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a88bec78f84b4b5ea7347b43c3895e69, type: 3}
   m_Name: Pick Up Sword Tooltip
   m_EditorClassIdentifier: 
-  <AvailableMessage>k__BackingField: Press [F] to pick up sword
+  <AvailableMessage>k__BackingField: Press <color="yellow">[F]</color> to pick up
+    <color="yellow">sword</color>
   <UnavailableMessage>k__BackingField: 
