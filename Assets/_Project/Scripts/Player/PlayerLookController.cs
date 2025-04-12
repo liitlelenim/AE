@@ -1,3 +1,6 @@
+using System;
+using AE.Manager;
+using AE.Manager.Locator;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,29 +18,25 @@ namespace AE.Player
         [SerializeField] private float minVerticalAngle = -60f;
         [SerializeField] private float maxVerticalAngle = 60f;
 
-        private PlayerInputActions _playerInputActions;
-
+        private InputManager _inputManager;
+        
         private Vector2 _currentLookAngles;
         private Vector2 _lookInput;
 
-        private void OnEnable()
+        private void Awake()
         {
-            if (_playerInputActions == null)
-            {
-                InitializePlayerInputActions();
-            }
-
-            _playerInputActions?.Enable();
-        }
-
-        private void OnDisable()
-        {
-            _playerInputActions?.Disable();
+            _inputManager = ManagersLocator.Instance.GetManager<InputManager>();
         }
 
         private void Update()
         {
+            ReadInput();
             UpdateLook();
+        }
+
+        private void ReadInput()
+        {
+            _lookInput = _inputManager.LookInput;
         }
 
         private void UpdateLook()
@@ -50,17 +49,6 @@ namespace AE.Player
             horizontalRotationParent.localRotation = Quaternion.Euler(Vector3.up * _currentLookAngles.x);
             verticalRotationParent.localRotation = Quaternion.Euler(Vector3.right * _currentLookAngles.y);
         }
-
-        private void HandleLookInput(InputAction.CallbackContext context)
-        {
-            _lookInput = context.ReadValue<Vector2>();
-        }
-
-        private void InitializePlayerInputActions()
-        {
-            _playerInputActions = new PlayerInputActions();
-            _playerInputActions.Navigation.Look.performed += HandleLookInput;
-            _playerInputActions.Navigation.Look.canceled += HandleLookInput;
-        }
+        
     }
 }

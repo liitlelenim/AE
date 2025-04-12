@@ -1,3 +1,5 @@
+using AE.Manager;
+using AE.Manager.Locator;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,40 +15,34 @@ namespace AE.Player
         [SerializeField] private float minFallingSpeed = 9f;
         [SerializeField] private float maxFallingSpeed = 25f;
 
-        private PlayerInputActions _playerInputActions;
         private CharacterController _characterController;
-
+        private InputManager _inputManager;
+        
         private Vector2 _movementDirectionInput;
         private float _currentFallingSpeed;
-
-        private void OnEnable()
-        {
-            if (_playerInputActions == null)
-            {
-                InitializePlayerInputActions();
-            }
-
-            _playerInputActions?.Enable();
-        }
+        
 
         private void Awake()
         {
             _characterController = GetComponent<CharacterController>();
+            _inputManager = ManagersLocator.Instance.GetManager<InputManager>();
         }
-
-        private void OnDisable()
-        {
-            _playerInputActions?.Disable();
-        }
+        
 
         // It's worth noting that the Character Controller is not based on rigidbody
         // so the movement using it should be performed in the "Update"
         private void Update()
         {
+            ReadInput();
             _characterController.Move(GetRelativeMovementDirection(_movementDirectionInput) *
                                       (movementSpeed * Time.deltaTime));
 
             HandleGravity();
+        }
+
+        private void ReadInput()
+        {
+            _movementDirectionInput = _inputManager.MoveInput;
         }
 
         private void HandleGravity()
@@ -63,21 +59,9 @@ namespace AE.Player
 
             _characterController.Move(Vector3.up * (_currentFallingSpeed * Time.deltaTime));
         }
-
-        private void HandleMoveInput(InputAction.CallbackContext callbackContext)
-        {
-            Vector2 input = callbackContext.ReadValue<Vector2>();
-            _movementDirectionInput = input;
-        }
-
+        
         private Vector3 GetRelativeMovementDirection(Vector2 movementDirectionInput) =>
             (transform.right * movementDirectionInput.x + transform.forward * movementDirectionInput.y).normalized;
-
-        private void InitializePlayerInputActions()
-        {
-            _playerInputActions = new PlayerInputActions();
-            _playerInputActions.Navigation.Move.performed += HandleMoveInput;
-            _playerInputActions.Navigation.Move.canceled += HandleMoveInput;
-        }
+        
     }
 }

@@ -16,36 +16,32 @@ namespace AE.Player
         [SerializeField] private LayerMask detectionLayerMask;
 
         private TooltipManager _tooltipManager;
+        private InputManager _inputManager;
         private IInteractableObject _detectedInteractable;
         private PlayerInputActions _playerInputActions;
 
         private void Awake()
         {
             _tooltipManager = ManagersLocator.Instance.GetManager<TooltipManager>();
+            _inputManager = ManagersLocator.Instance.GetManager<InputManager>();
         }
 
         private void OnEnable()
         {
-            if (_playerInputActions == null)
-            {
-                InitializePlayerInputActions();
-            }
-
-            _playerInputActions?.Enable();
+            _inputManager.OnInteractionPerformed += TryToInteract;
         }
 
         private void OnDisable()
         {
-            _playerInputActions?.Disable();
+            _inputManager.OnInteractionPerformed -= TryToInteract;
         }
-
 
         private void Update()
         {
             TryToDetectInteractable();
         }
 
-        private void OnInteractButtonDown(InputAction.CallbackContext _)
+        private void TryToInteract()
         {
             if (!(_detectedInteractable?.IsAvailable ?? false)) return;
 
@@ -70,11 +66,6 @@ namespace AE.Player
             _tooltipManager.SetCurrentTooltip(null, false);
             _detectedInteractable = null;
         }
-
-        private void InitializePlayerInputActions()
-        {
-            _playerInputActions = new PlayerInputActions();
-            _playerInputActions.Interaction.Interact.performed += OnInteractButtonDown;
-        }
+        
     }
 }
