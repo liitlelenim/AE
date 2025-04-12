@@ -1,16 +1,19 @@
 using System;
+using AE.Manager.Locator;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace AE.Manager
 {
-    public class FaderManager : MonoBehaviour
+    public class FaderManager : MonoBehaviour, IManager
     {
         [Header("Fader Settings")]
         [SerializeField] private bool shouldBeFadedAtStart = true;
+
         [SerializeField] private Color fadedColor = Color.black;
         [SerializeField] private Color transparentColor = Color.clear;
+
         [Header("References")]
         [SerializeField] private Image faderImage;
 
@@ -20,27 +23,20 @@ namespace AE.Manager
         }
 
 
-        public void FadeIn(float duration = 1f, Action onFinished = null)
+        public void FadeIn(Action onFinished = null, float duration = 1f)
         {
-            DOVirtual.Color(fadedColor, transparentColor, duration, color =>
-            {
-                faderImage.color = color;
-            })
-            .SetAutoKill()
-            .OnComplete(() => {
-                onFinished?.Invoke();
-            }).Play();
+            DOVirtual.Color(fadedColor, transparentColor, duration, color => { faderImage.color = color; })
+                .SetAutoKill()
+                .OnComplete(() => { onFinished?.Invoke(); })
+                .Play();
         }
-        public void FadeOut(float duration = 1f, Action onFinished = null)
+
+        public void FadeOut(Action onFinished = null, float duration = 1f)
         {
-            DOVirtual.Color(fadedColor, transparentColor, duration, color =>
-            {
-                faderImage.color = color;
-            })
-            .SetAutoKill()
-            .OnComplete(() => {
-                onFinished?.Invoke();
-            }).Play();
+            DOVirtual.Color(transparentColor, fadedColor, duration, color => { faderImage.color = color; })
+                .SetAutoKill()
+                .OnComplete(() => { onFinished?.Invoke(); })
+                .Play();
         }
 
         private void SetInitialFaderColor()
