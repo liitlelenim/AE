@@ -17,5 +17,10 @@ namespace AE.Environment
         {
             candleStand.SetCurrentCandlesAmount(_alreadyInteractedSkeletons);
         }
+
+        public void FinishLevel()
+        {
+            
+        }
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using AE.Item;
 using AE.Manager;
 using AE.Manager.Locator;
