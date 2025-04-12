@@ -123,8 +123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalRotationParent: {fileID: 7923131713939248683}
   verticalRotationParent: {fileID: 3882336440986590265}
-  xLookSensitivity: 90
-  yLookSensitivity: 90
+  xLookSensitivity: 25
+  yLookSensitivity: 25
   minVerticalAngle: -85
   maxVerticalAngle: 85
 --- !u!1 &4001355920880370826

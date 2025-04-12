@@ -13,8 +13,8 @@ namespace AE.Player
         [SerializeField] private Transform verticalRotationParent;
 
         [Header("Look Settings")] 
-        [SerializeField] private float xLookSensitivity = 90f;
-        [SerializeField] private float yLookSensitivity = 90f;
+        [SerializeField] private float xLookSensitivity = 25;
+        [SerializeField] private float yLookSensitivity = 25;
         [SerializeField] private float minVerticalAngle = -60f;
         [SerializeField] private float maxVerticalAngle = 60f;
 
