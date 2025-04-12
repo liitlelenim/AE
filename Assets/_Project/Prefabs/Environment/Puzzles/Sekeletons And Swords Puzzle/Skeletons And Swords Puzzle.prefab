@@ -55,6 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   candleStand: {fileID: 29392556344789233}
+  goldenSkullController: {fileID: 7009048117483652640}
 --- !u!1001 &1059114419375965580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -364,8 +365,7 @@ PrefabInstance:
       value: Candle Stand Prefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 206100962449039467, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
@@ -378,6 +378,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 883b0eec9809a3c40ae84b75dad02d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7009048117483652640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5473321009873981577, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+  m_PrefabInstance: {fileID: 3075958911623452329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b40a99fa82f43bf4da2298ee959512eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &7213238122527022369 stripped

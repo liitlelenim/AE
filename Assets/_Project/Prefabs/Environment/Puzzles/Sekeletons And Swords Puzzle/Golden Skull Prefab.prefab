@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 3552410826934864736}
   - component: {fileID: 3692048118337752653}
   - component: {fileID: 1120463924752704291}
-  - component: {fileID: 4456818987495492168}
+  - component: {fileID: 3334561941670699720}
+  - component: {fileID: 3753869422458129422}
   m_Layer: 0
   m_Name: Golden Skull Prefab
   m_TagString: Untagged
@@ -127,7 +128,7 @@ MonoBehaviour:
   <HoldingOffset>k__BackingField: {x: 0.6, y: -0.7, z: 1.25}
   <HoldingRotation>k__BackingField: {x: 15, y: 180, z: 0}
   itemRigidbody: {fileID: 0}
---- !u!114 &4456818987495492168
+--- !u!114 &3334561941670699720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,9 +137,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 9003994159063799941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7ee64827648ba741b6d7ed675d79b50, type: 3}
+  m_Script: {fileID: 11500000, guid: b40a99fa82f43bf4da2298ee959512eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skullTwitchIntervalMilliseconds: 50
+  initialPositionSetUpDuration: 0.5
+  initialMaxTwitchingOffset: 0.0025
+  skullAfterTransformationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  colorTransformationDuration: 1
+  floatingYOffset: 0.5
+  floatingInterval: 2
+--- !u!114 &3753869422458129422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003994159063799941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e826ae941a94a81a83dca629ab2dd94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <Tooltip>k__BackingField: {fileID: 11400000, guid: acd6678a1845dfb4ca51de7450718d8e, type: 2}
   pickUpItem: {fileID: 1120463924752704291}
   oneUsePickup: 1
+  goldenSkullController: {fileID: 3334561941670699720}

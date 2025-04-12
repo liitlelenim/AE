@@ -15172,6 +15172,38 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &7001484047107216822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 356189878750607188}
+  m_Layer: 0
+  m_Name: Golden Skull Holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &356189878750607188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7001484047107216822}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 3.5, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8948051843000625078}
+  m_Father: {fileID: 5668503128031628168}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7307158184511413751
 GameObject:
   m_ObjectHideFlags: 0
@@ -15243,6 +15275,7 @@ Transform:
   - {fileID: 1800196472201709233}
   - {fileID: 4206835571856249874}
   - {fileID: 8415117848205981472}
+  - {fileID: 356189878750607188}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5790380245998765478
@@ -20246,3 +20279,77 @@ Transform:
   - {fileID: 3906296246776215736}
   m_Father: {fileID: 5668503128031628168}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7328370474615386689
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 356189878750607188}
+    m_Modifications:
+    - target: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7500002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7500002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.895
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9003994159063799941, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+      propertyPath: m_Name
+      value: Golden Skull Prefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+--- !u!4 &8948051843000625078 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1845991652007466487, guid: c072eb47e9d317c4aaa1970fe7803513, type: 3}
+  m_PrefabInstance: {fileID: 7328370474615386689}
+  m_PrefabAsset: {fileID: 0}
