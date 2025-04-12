@@ -27,6 +27,7 @@ namespace AE.Environment
                 _pointLight.intensity = _initialLightIntensity * currentFlickerValue;
                 _pointLight.range = _initialLightRange * currentFlickerValue;
             })
+            .SetLink(gameObject)
             .SetLoops(-1, LoopType.Yoyo)
             .Play();
         }

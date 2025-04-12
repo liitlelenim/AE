@@ -17620,6 +17620,14 @@ PrefabInstance:
       propertyPath: mat
       value: 
       objectReference: {fileID: 425753618}
+    - target: {fileID: 6120251957150297365, guid: 9d083442430b8c7489efd49f8e917fc9, type: 3}
+      propertyPath: xLookSensitivity
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120251957150297365, guid: 9d083442430b8c7489efd49f8e917fc9, type: 3}
+      propertyPath: yLookSensitivity
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 7923131713939248683, guid: 9d083442430b8c7489efd49f8e917fc9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.132
