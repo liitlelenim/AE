@@ -9,7 +9,8 @@ namespace AE.Environment.Interactable
     public class PutSwordInSkeletonInteraction : MonoBehaviour, IInteractableObject
     {
         public bool IsAvailable =>
-            (_pickUpItemManager?.CurrentHeldItem?.ItemIdentifier ?? false) == swordItemIdentifier
+            _pickUpItemManager?.CurrentHeldItem?.ItemIdentifier != null 
+            && _pickUpItemManager.CurrentHeldItem.ItemIdentifier == swordItemIdentifier 
             && !_alreadyInteracted;
 
         [Header("Interaction Settings")]
