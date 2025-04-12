@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4453939841310444170}
+  - component: {fileID: 7499917834428088732}
   m_Layer: 0
   m_Name: Skeletons And Swords Puzzle
   m_TagString: Untagged
@@ -29,17 +30,31 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 125574008924533572}
   - {fileID: 6411490957665634416}
   - {fileID: 1957216301708286939}
-  - {fileID: 2862205295915420373}
-  - {fileID: 6242262888071187991}
-  - {fileID: 6316913543049601082}
-  - {fileID: 1612416217160324107}
   - {fileID: 8236863347830554787}
   - {fileID: 8980029006822845291}
+  - {fileID: 2862205295915420373}
+  - {fileID: 6316913543049601082}
+  - {fileID: 1612416217160324107}
+  - {fileID: 125574008924533572}
+  - {fileID: 7213238122527022369}
+  - {fileID: 6242262888071187991}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7499917834428088732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556448148186424849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc10355fe5f2439a833891e4ebce0161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candleStand: {fileID: 29392556344789233}
 --- !u!1001 &1059114419375965580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154,6 +169,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8434104249812667855, guid: 31a93cd3612a36046b9d3a3f34d564d9, type: 3}
+      propertyPath: puzzleController
+      value: 
+      objectReference: {fileID: 7499917834428088732}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -225,6 +244,80 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6217373206528658940, guid: a7af25d64b8fed24f93c15ce83fae374, type: 3}
   m_PrefabInstance: {fileID: 2596250897106079071}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3075958911623452329
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4453939841310444170}
+    m_Modifications:
+    - target: {fileID: 5668503128031628168, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.221083
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668503128031628168, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.0912595
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668503128031628168, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.6295309
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668503128031628168, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.983689
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668503128031628168, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000007450581
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668503128031628168, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.17987794
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668503128031628168, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668503128031628168, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668503128031628168, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668503128031628168, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961384659899122561, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+      propertyPath: m_Name
+      value: Candle Stand Prefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 206100962449039467, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+--- !u!114 &29392556344789233 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3087336338810969688, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+  m_PrefabInstance: {fileID: 3075958911623452329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883b0eec9809a3c40ae84b75dad02d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &7213238122527022369 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5668503128031628168, guid: 4ba177695ddf5214780b35a8db1a9aeb, type: 3}
+  m_PrefabInstance: {fileID: 3075958911623452329}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3087203457930438295
 PrefabInstance:
@@ -406,6 +499,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -16.703
       objectReference: {fileID: 0}
+    - target: {fileID: 8434104249812667855, guid: 31a93cd3612a36046b9d3a3f34d564d9, type: 3}
+      propertyPath: puzzleController
+      value: 
+      objectReference: {fileID: 7499917834428088732}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -558,6 +655,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8434104249812667855, guid: 31a93cd3612a36046b9d3a3f34d564d9, type: 3}
+      propertyPath: puzzleController
+      value: 
+      objectReference: {fileID: 7499917834428088732}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -578,7 +679,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5542098873099514098, guid: 31a93cd3612a36046b9d3a3f34d564d9, type: 3}
       propertyPath: m_Name
-      value: Skeleton Corpse Prefab
+      value: Skeleton Corpse Prefab (4)
       objectReference: {fileID: 0}
     - target: {fileID: 8360880358022297509, guid: 31a93cd3612a36046b9d3a3f34d564d9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -620,6 +721,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.318
       objectReference: {fileID: 0}
+    - target: {fileID: 8434104249812667855, guid: 31a93cd3612a36046b9d3a3f34d564d9, type: 3}
+      propertyPath: puzzleController
+      value: 
+      objectReference: {fileID: 7499917834428088732}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

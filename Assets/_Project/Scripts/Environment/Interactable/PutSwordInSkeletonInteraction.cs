@@ -26,6 +26,7 @@ namespace AE.Environment.Interactable
         [SerializeField] private float swordSetUpDuration = 1f;
         [SerializeField] private float swordThrustDuration = 0.2f;
 
+        [Header("References")] [SerializeField] private SkeletonsAndSwordsPuzzleController puzzleController;
         private PickUpItemManager _pickUpItemManager;
         private TooltipManager _tooltipManager;
         private GameObject _usedSwordGameObject;
@@ -73,7 +74,8 @@ namespace AE.Environment.Interactable
 
         private void OnInteractionAnimationComplete()
         {
-            afterInteractionEffectsParent.gameObject.SetActive(true);
+            afterInteractionEffectsParent?.gameObject.SetActive(true);
+            puzzleController?.MarkPuzzleProgress();
         }
     }
 }
