@@ -26,7 +26,8 @@ namespace AE.Environment.Interactable
         [SerializeField] private float swordSetUpDuration = 1f;
         [SerializeField] private float swordThrustDuration = 0.2f;
 
-        [Header("References")] [SerializeField] private SkeletonsAndSwordsPuzzleController puzzleController;
+        [Header("References")] 
+        [SerializeField] private SkeletonsAndSwordsPuzzleController puzzleController;
         private PickUpItemManager _pickUpItemManager;
         private TooltipManager _tooltipManager;
         private GameObject _usedSwordGameObject;
@@ -45,16 +46,15 @@ namespace AE.Environment.Interactable
             _alreadyInteracted = true;
             _usedSwordGameObject = _pickUpItemManager.CurrentHeldItem.gameObject;
             _pickUpItemManager.PutDownItem();
-            CleanUpSwordObject();
+            ClearTooltip();
 
             PlaySwordAnimationSequence();
         }
 
-        private void CleanUpSwordObject()
+        private void ClearTooltip()
         {
             Tooltip = null;
             _tooltipManager.SetCurrentTooltip(null, false);
-            Destroy(_usedSwordGameObject.GetComponent<PickUpInteraction>());
         }
 
         private void PlaySwordAnimationSequence()

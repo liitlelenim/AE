@@ -8,10 +8,12 @@ namespace AE.Environment.Interactable
 {
     public class PickUpInteraction : MonoBehaviour, IInteractableObject
     {
-        [field: SerializeField] public InteractionTooltip Tooltip { get; set; }
         public bool IsAvailable => !_pickUpItemManager?.IsHoldingItem ?? false;
 
+        [Header("Interaction Settings")]
+        [field: SerializeField] public InteractionTooltip Tooltip { get; set; }
         [SerializeField] private PickUpItem pickUpItem;
+        [SerializeField] private bool oneUsePickup;
 
         private PickUpItemManager _pickUpItemManager;
 
@@ -25,6 +27,7 @@ namespace AE.Environment.Interactable
             if (!IsAvailable) return;
 
             _pickUpItemManager.PickUpItem(pickUpItem);
+            if(oneUsePickup) Destroy(this);
         }
     }
 }

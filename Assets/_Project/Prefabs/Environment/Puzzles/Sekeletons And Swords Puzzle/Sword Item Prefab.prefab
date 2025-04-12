@@ -141,3 +141,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Tooltip>k__BackingField: {fileID: 11400000, guid: ccb08e2692bd472418388226816fb6fe, type: 2}
   pickUpItem: {fileID: 4783281630891422691}
+  oneUsePickup: 1
